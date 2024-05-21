@@ -1,0 +1,17 @@
+.morning {
+    color: rgb(255, 63, 111);
+    background-color: #ecd4d6;
+  }
+  
+  .afternoon {
+    color: rgb(54, 5, 17);
+    background-color: #fceecf;
+  }
+  
+  .morning-image {
+    background-image: url('./kirbys.png');
+  }
+  
+  .afternoon-image {
+    background-image: url('./waddledee.png');
+  }
