@@ -71,3 +71,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## vercel.ver
 https://vercel.com/eumgouns-projects/2024-k7
+https://2024-k7.vercel.app/
