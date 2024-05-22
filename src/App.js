@@ -2,12 +2,15 @@ import './App.css';
 import { RiHomeOfficeFill } from "react-icons/ri";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Mydiv from './03/Mydiv';
-import MyList from './04/MyList';
+// import MyList from './04/MyList';
 import Lotto from './05/Lotto';
 import MyClock from './08/MyClock';
 import FoodMain from './09/FoodMain';
 import TrafficMain from './10/TrafficMain';
 import GalleryMain from './13/GalleryMain';
+import Frcst from './15/Frcst';
+import FrcstList from './15/FrcstList';
+
 
 function App() {
   return (
@@ -18,7 +21,6 @@ function App() {
           <nav>
             <ul className="flex space-x-4 text-sky-900">
               <li><Link to="/Mydiv">하트</Link></li>
-              <li><Link to="/MyList">리스트</Link></li>
               <li><Link to="/Lotto">로또</Link></li>
               <li><Link to="/MyClock">알람 시계</Link></li>
               <li><Link to="/FoodMain">음식</Link></li>
@@ -26,21 +28,25 @@ function App() {
               <li><Link to="/GalleryMain">갤러리</Link></li>
             </ul>
           </nav>
-          <p className="flex items-center space-x-4"><RiHomeOfficeFill className='text-3xl text-sky-900'/></p>
+          <p className="flex items-center space-x-4"><RiHomeOfficeFill className='text-3xl text-sky-900' /></p>
         </header>
         <main className='grow w-full flex justify-center items-center overflow-y-auto '>
-          <div>
+          <div className="w-full">
             <Routes>
               <Route path="/Mydiv" element={<Mydiv />} />
-              <Route path="/MyList" element={<MyList />} />
               <Route path="/Lotto" element={<Lotto />} />
               <Route path="/MyClock" element={<MyClock />} />
               <Route path="/FoodMain" element={<FoodMain />} />
               <Route path="/TrafficMain" element={<TrafficMain />} />
               <Route path="/GalleryMain" element={<GalleryMain />} />
+              <Route path="/frcst" element={<Frcst />} />
+              <Route path="/flist" element={<FrcstList />} />
             </Routes>
           </div>
         </main>
+        <div>
+          <Frcst />
+        </div>
         <footer className='flex justify-center items-center h-16 bg-black text-slate-100'>
           ⓒ 2024 , K-digital-7
         </footer>
