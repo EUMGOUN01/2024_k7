@@ -2,15 +2,13 @@ import './App.css';
 import { RiHomeOfficeFill } from "react-icons/ri";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Mydiv from './03/Mydiv';
-// import MyList from './04/MyList';
 import Lotto from './05/Lotto';
 import MyClock from './08/MyClock';
 import FoodMain from './09/FoodMain';
-import TrafficMain from './10/TrafficMain';
-import GalleryMain from './13/GalleryMain';
 import Frcst from './15/Frcst';
 import FrcstList from './15/FrcstList';
 
+import RecoilMain from './16/RecoilMain';
 
 function App() {
   return (
@@ -24,29 +22,24 @@ function App() {
               <li><Link to="/Lotto">로또</Link></li>
               <li><Link to="/MyClock">알람 시계</Link></li>
               <li><Link to="/FoodMain">음식</Link></li>
-              <li><Link to="/TrafficMain">여행</Link></li>
-              <li><Link to="/GalleryMain">갤러리</Link></li>
+              <li><Link to="/frcst">날씨 예보</Link></li> {/* 수정: Frcst 컴포넌트로 이동하는 링크 추가 */}
+              <li><Link to="/RecoilMain">리코일</Link></li>
+              
             </ul>
           </nav>
           <p className="flex items-center space-x-4"><RiHomeOfficeFill className='text-3xl text-sky-900' /></p>
         </header>
         <main className='grow w-full flex justify-center items-center overflow-y-auto '>
-          <div className="w-full">
-            <Routes>
-              <Route path="/Mydiv" element={<Mydiv />} />
-              <Route path="/Lotto" element={<Lotto />} />
-              <Route path="/MyClock" element={<MyClock />} />
-              <Route path="/FoodMain" element={<FoodMain />} />
-              <Route path="/TrafficMain" element={<TrafficMain />} />
-              <Route path="/GalleryMain" element={<GalleryMain />} />
-              <Route path="/frcst" element={<Frcst />} />
-              <Route path="/flist" element={<FrcstList />} />
-            </Routes>
-          </div>
+          <Routes>
+            <Route path="/Mydiv" element={<Mydiv />} />
+            <Route path="/Lotto" element={<Lotto />} />
+            <Route path="/MyClock" element={<MyClock />} />
+            <Route path="/FoodMain" element={<FoodMain />} />
+            <Route path="/frcst" element={<Frcst />} />
+            <Route path="/flist" element={<FrcstList />} />
+            <Route path="/RecoilMain" element={<RecoilMain />} />
+          </Routes>
         </main>
-        <div>
-          <Frcst />
-        </div>
         <footer className='flex justify-center items-center h-16 bg-black text-slate-100'>
           ⓒ 2024 , K-digital-7
         </footer>
@@ -56,7 +49,6 @@ function App() {
 }
 
 export default App;
-
 // import './App.css';
 // import { RiHomeOfficeFill } from "react-icons/ri";
 // //import Mydiv from './03/Mydiv';

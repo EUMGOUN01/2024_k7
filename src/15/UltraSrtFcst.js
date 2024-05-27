@@ -43,7 +43,7 @@ export default function UltraSrtFcst() {
   useEffect(() => {
     let  url = `https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst?`;
     url += `serviceKey=${process.env.REACT_APP_API_KEY}`;
-    url += `&pageNo=1&numOfRows=1000&dataType=json&base_date=${dt}&base_time=${x}&nx=55&ny=${y}`;
+    url += `&pageNo=1&numOfRows=1000&dataType=json&base_date=20240522&base_time=0630&nx=55&ny=127`;
 
     getData(url);
   }, [dt, x, y]);
