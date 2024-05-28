@@ -7,6 +7,7 @@ import MyClock from './08/MyClock';
 import FoodMain from './09/FoodMain';
 import Frcst from './15/Frcst';
 import FrcstList from './15/FrcstList';
+import Rest from './17/Rest';
 
 import RecoilMain from './16/RecoilMain';
 
@@ -24,6 +25,7 @@ function App() {
               <li><Link to="/FoodMain">음식</Link></li>
               <li><Link to="/frcst">날씨 예보</Link></li> {/* 수정: Frcst 컴포넌트로 이동하는 링크 추가 */}
               <li><Link to="/RecoilMain">리코일</Link></li>
+              <li><Link to="/Rest">Rest</Link></li>
               
             </ul>
           </nav>
@@ -38,6 +40,7 @@ function App() {
             <Route path="/frcst" element={<Frcst />} />
             <Route path="/flist" element={<FrcstList />} />
             <Route path="/RecoilMain" element={<RecoilMain />} />
+            <Route path="/Rest" element={<Rest />} />
           </Routes>
         </main>
         <footer className='flex justify-center items-center h-16 bg-black text-slate-100'>
